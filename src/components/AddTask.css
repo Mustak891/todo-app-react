@@ -1,0 +1,33 @@
+.addtask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 20vh;
+}
+
+.addtask button{
+    width: 10%;
+    padding: 10px 5px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    font-weight: bolder;
+    border-radius: 6px;
+    background: linear-gradient(130deg,rgb(3, 192, 218),rgb(0, 198, 248),blue);
+    background-size: 200% 200%;
+    animation: changebg 2s linear .4s infinite;
+}
+
+@keyframes changebg{
+    0%{
+        background-position: 10% 0%;
+    } 50% {
+        background-position: 91% 100%;
+    } 100% {
+        background-position: 10% 0%;
+    }
+}
