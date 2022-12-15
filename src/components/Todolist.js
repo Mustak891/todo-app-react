@@ -9,14 +9,14 @@ function Todolist(props) {
 
     const todolist = props.todolist.map((task,index) => {
         const taskComplete = task => {
-            axios.put(`https://daytodo.herokuapp.com/api/tasks/${task._id}` , {
+            axios.put(`https://todo-app-node.vercel.app/api/tasks/${task._id}` , {
                 _id : task._id,
                 todo: task.todo,
                 isComplete : !task.isComplete
             }).then(res => props.taskComplete(res.data)).catch(err => console.log(err))
         }
         const removeTask = id => {
-            axios.delete(`https://daytodo.herokuapp.com/api/tasks/${id}`).then(res => props.removeTask(res.data)).catch(err => console.log(err))
+            axios.delete(`https://todo-app-node.vercel.app/api/tasks/${id}`).then(res => props.removeTask(res.data)).catch(err => console.log(err))
         } 
 
         return <li key = {index}>

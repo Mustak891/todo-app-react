@@ -12,7 +12,7 @@ function App() {
   const [showPopup,setShowPopup] = useState(false)
 
   useEffect(() => {
-    axios.get('https://daytodo.herokuapp.com/api/tasks').then(res => {
+    axios.get('https://todo-app-node.vercel.app/api/tasks').then(res => {
       setTodolist(res.data)
     }).catch(err => console.log(err))
   },[])

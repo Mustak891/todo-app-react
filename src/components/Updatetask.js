@@ -9,7 +9,7 @@ function Updatetask(props) {
         if(task.trim() === '' || props.task.todo === task){
             props.removePopup()
         } else {
-            axios.put(`https://daytodo.herokuapp.com/api/tasks/${props.task._id}`,{
+            axios.put(`https://todo-app-node.vercel.app/api/tasks/${props.task._id}`,{
                 _id : props.task._id,
                 todo : task,
                 isComplete : props.task.isComplete

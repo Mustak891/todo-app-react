@@ -14,7 +14,7 @@ function Addtask(props) {
         if(task.trim() === ''){
             return 
         } else {
-            axios.post('https://daytodo.herokuapp.com/api/tasks' , {
+            axios.post('https://todo-app-node.vercel.app/api/tasks' , {
                 todo : task,
                 isComplete : false
             }).then(res => {
